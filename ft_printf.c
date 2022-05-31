@@ -60,7 +60,7 @@ static int	choose(char s, va_list str)
 	{
 		if (f[i].arg == s)
 		{
-			ret = ((int)f[i].methods.fun    rg(str, void *), s));
+			ret = ((int)f[i].methods.func_name(va_arg(str, void *), s));
 			break ;
 		}
 	}
@@ -96,11 +96,3 @@ int	ft_printf(const char *s, ...)
 	va_end(ap);
 	return ((count));
 }
-#include <stdio.h>
- int main()
- {
-
-	int i = 0;
-	i =  ft_printf("%p\n",110);
-	ft_printf("%d",i);
- }
